@@ -1,0 +1,68 @@
+$main-color: #275A53;
+$light-background: #F1F6F4;
+$font-weight-800: 800;
+$font-weight-600: 600;
+
+//header
+.logo{
+    width: 90px;
+    height: 47px;
+}
+.header-link{
+    padding:8px 20px!important;
+    font-weight:600!important;
+    color:#000!important;
+    border-bottom: 4px solid transparent;
+    transition: .5s;
+}
+.header-link:hover{
+    text-decoration: none;
+    border-bottom: 4px solid $main-color;
+}
+.header-button{
+    padding: 0.375rem 1.75rem!important;
+    background-color: $main-color!important;
+}
+//home banner
+.home-banner{
+    height: 400px;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+//home rent
+.home-rent{
+    background-color: $light-background;
+}
+.home-rent h2{
+    font-weight:$font-weight-800 ;
+}
+.home-rent h6{
+    color: $main-color;
+}
+.single-apartment h5 {
+    font-weight:$font-weight-800 ;
+    color: $main-color;
+}
+.single-apartment h2{
+    color: $main-color;
+}
+
+
+//services 
+.allServices{
+    background-color: $light-background;
+}
+.service-info img{
+    width: 100px;
+}
+
+//footer
+.footer-area{
+    background-color: $main-color;
+    word-spacing: 5px;
+}
+.footer-area img{
+    color: white;
+    width: 30px;
+    height: 30px;
+}
