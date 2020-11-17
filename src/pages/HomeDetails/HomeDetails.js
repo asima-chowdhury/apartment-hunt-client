@@ -17,7 +17,7 @@ const HomeDetails = () => {
     const history = useHistory();
 
     useEffect(() => {
-        fetch('http://localhost:5000/apartment')
+        fetch('https://limitless-everglades-16673.herokuapp.com/apartment')
             .then(res => res.json())
             .then(data => {
                 const singleHome = data.map(home => home);
@@ -29,7 +29,7 @@ const HomeDetails = () => {
 
     const onSubmit = (data) => {
             console.log(data);
-            fetch('http://localhost:5000/addBooking',{
+            fetch('https://limitless-everglades-16673.herokuapp.com/addBooking',{
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json'},
                 body: JSON.stringify(data)

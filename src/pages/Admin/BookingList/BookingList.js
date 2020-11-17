@@ -11,7 +11,7 @@ const BookingList = () => {
     const [totalBookingList, setTotalBookingList] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/allBooking`)
+        fetch(`https://limitless-everglades-16673.herokuapp.com/allBooking`)
             .then(res => res.json())
             .then(data => {
                 setTotalBookingList(data);

@@ -4,7 +4,7 @@ import SingleApartment from '../SingleApartment/SingleApartment';
 const HomeRent = () => {
     const [apartmentData, setApartmentData] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/apartment')
+        fetch('https://limitless-everglades-16673.herokuapp.com/apartment')
             .then(res => res.json())
             .then(data => setApartmentData(data))
     }, [])

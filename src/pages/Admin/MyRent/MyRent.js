@@ -12,7 +12,7 @@ const MyRent = () => {
     const [rentDetails, setRentDetails] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/rentDetails?email=' + loggedInUser.email,)
+        fetch('https://limitless-everglades-16673.herokuapp.com/rentDetails?email=' + loggedInUser.email,)
             .then(res => res.json())
             .then(data => {
                 setRentDetails(data);
