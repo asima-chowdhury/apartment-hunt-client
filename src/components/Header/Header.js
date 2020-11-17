@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { UserContext } from '../../App';
 import logo from '../../images/logos/logo.png';
 
 const Header = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     return (
         <Container>
             <Navbar bg="light" variant="light" expand="lg" className="py-4">
@@ -18,9 +20,13 @@ const Header = () => {
                         <Link to="#" className="header-link">Service</Link>
                         <Link to="#" className="header-link">Concerns</Link>
                         <Link to="#" className="header-link">Event</Link>
-                        <Link to="#" className="header-link">Contact</Link>
-                        <Link to="/dashboard">
-                            <Button variant="info" className="header-button">Login</Button>
+                        <Link to="/bookingList"><Button variant="info" className="header-button">Dashboard</Button></Link>
+                        <Link to="/login">
+                            {/* <Button variant="info" className="header-button">Login</Button> */}
+                            {
+                            loggedInUser.email ? <Button variant="info" className="header-button" onClick={() => setLoggedInUser({})}>Log Out</Button>
+                                : <Button variant="info" className="header-button">Login</Button>
+                        }
                         </Link>
                     </Nav>
                 </Navbar.Collapse>
